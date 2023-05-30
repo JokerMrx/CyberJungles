@@ -1,0 +1,19 @@
+@import "../../styles/index.module.scss";
+
+.containerNavigation {
+  padding-top: 11px;
+  display: flex;
+  justify-content: center;
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+
+    a {
+      @include font_title_style(24px, 400);
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+}

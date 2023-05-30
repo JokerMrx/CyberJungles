@@ -1,0 +1,30 @@
+@import "../../styles/index.module.scss";
+
+.history {
+  display: flex;
+  gap: 21px;
+
+  > img,
+  > div {
+    height: 817px;
+    width: 820px;
+  }
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: grayscale(100%);
+
+    p {
+      height: 524px;
+      width: 732px;
+      display: flex;
+      align-items: center;
+      @include font_style(20px);
+      line-height: 25px;
+      vertical-align: center;
+      text-align: left;
+    }
+  }
+}

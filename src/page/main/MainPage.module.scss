@@ -1,0 +1,129 @@
+@import "../../styles/index.module.scss";
+
+.container {
+  position: relative;
+  max-width: $max-width-container-lg;
+
+  .header {
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+  }
+
+  .facePage {
+    position: relative;
+    height: 1080px;
+    /* width: 100%; */
+    width: 1920px;
+    background: url("../../assets/image/background.jpg");
+    background-size: cover;
+
+    .subtitle {
+      margin: 0;
+      padding-top: 263px;
+      @include font_style(64px, 800);
+      line-height: 80px;
+      letter-spacing: -0.145em;
+      text-align: center;
+    }
+
+    .mainTitle {
+      margin: 0;
+      margin-top: 50px;
+      @include font_title_style(230px);
+      line-height: 253px;
+      letter-spacing: 0.08em;
+      text-align: center;
+    }
+
+    .imgPerson {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .info {
+    position: relative;
+    padding: 140px 0 140px;
+
+    .content {
+      p {
+        @include font_style();
+        text-align: center;
+      }
+    }
+
+    .imgDiamondSM,
+    .imgDiamondMD,
+    .imgWeapon {
+      position: absolute;
+      top: 0;
+    }
+
+    .imgDiamondSM {
+      margin: 66px 0 0 342px;
+      height: 58px;
+      width: 58px;
+    }
+
+    .imgDiamondMD {
+      right: 0;
+      margin: 95px 75px 0 0;
+      height: 123px;
+      width: 123px;
+    }
+
+    .imgWeapon {
+      margin: 308px 0 0 1px;
+      height: 367px;
+      width: 367px;
+    }
+  }
+
+  .characters {
+    .title{
+        @include font_title_style(96px);
+        line-height: 106px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        text-align: center;
+
+        span{
+            color: $primary-color;
+        }
+    }
+
+    .cards{
+        margin-top: 160px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+  }
+
+  .history {
+    margin-top: 200px;
+
+    .title{
+        @include font_title_style(96px);
+        line-height: 106px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        text-align: center;
+
+        span{
+            color: $primary-color;
+        }
+    }
+
+    .histories {
+        margin-top: 160px;
+        display: flex;
+        flex-direction: column;
+    }
+  }
+}

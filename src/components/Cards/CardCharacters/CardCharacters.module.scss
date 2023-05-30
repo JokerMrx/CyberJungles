@@ -1,0 +1,40 @@
+@import "../../../styles/index.module.scss";
+
+$height-img: 760px;
+$width-img: 540px;
+$border-img: 3;
+$border-radius-img: 20px;
+$width-container-des: 469px;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .img {
+    height: $height-img;
+    width: $width-img;
+    border: $border-img;
+    border-radius: $border-radius-img;
+  }
+
+  .name, .des {
+    margin: 0;
+  }
+
+  .name {
+    margin-top: 27px;
+    @include font_title_style(44px);
+    line-height: 44px;
+    letter-spacing: 0.1em;
+    text-align: center;
+  }
+
+  .des {
+    max-width: $width-container-des;
+    margin-top: 30px;
+    @include font_style(20px);
+    line-height: 25px;
+    text-align: center;
+  }
+}
