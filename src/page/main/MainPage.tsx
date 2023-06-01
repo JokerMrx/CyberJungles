@@ -1,6 +1,8 @@
 import Header from "../../components/Header/Header";
 import CardCharacters from "../../components/Cards/CardCharacters/CardCharacters";
 import History from "../../components/History/History";
+import CardAnimal from "../../components/Cards/CardAnimal/CardAnimal";
+import Footer from "../../components/Footer/Footer";
 
 import ImagePerson from "../../assets/image/person.png";
 import ImageDiamondMD from "../../assets/image/diamond-md.png";
@@ -9,12 +11,18 @@ import ImageWeapon from "../../assets/image/weapon.png";
 
 import { CHARACTERS_DATA } from "../../data/MainPage.data";
 import { HISTORY_DATA } from "../../data/History.data";
+import { ANIMALS_DATA } from "../../data/CardAnimals.data";
+
+import ImagePartShadow from "../../assets/image/part-shadow.png"; 
+import ImagePartGhost from "../../assets/image/part-ghost.png"; 
 
 import styles from "./MainPage.module.scss";
 
 const PERSON = "Person";
 const DIAMOND = "Diamond";
 const WEAPON = "Weapon";
+const GHOST = "Ghost";
+const SHADOW = "Shadow";
 
 const MainPage = () => {
   return (
@@ -79,6 +87,33 @@ const MainPage = () => {
           ))}
         </div>
       </section>
+      <section className={styles.cards}>
+        <h1 className={styles.title}>
+          Ca<span>r</span>ds
+        </h1>
+        <div className={styles.cards}>
+          {ANIMALS_DATA.map(({img, name, damage, price, health}) => (
+            <CardAnimal
+              img={img}
+              name={name}
+              damage={damage}
+              price={price}
+              health={health}
+            />
+          ))}
+        </div>
+      </section>
+      <section className={styles.download}>
+            <div className={styles.containerContent}>
+              <h1>
+              Fight your opponent in a fight for life and death
+              </h1>
+              <button className={styles.btnDownload}>Download a game</button>
+            </div>
+            <img src={ImagePartGhost} alt={GHOST} />
+            <img src={ImagePartShadow} alt={SHADOW} />
+      </section>
+      <Footer />
     </main>
   );
 };

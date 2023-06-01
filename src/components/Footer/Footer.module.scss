@@ -1,0 +1,73 @@
+@import "../../styles/index.module.scss";
+
+.footer {
+  display: flex;
+  height: 79px;
+  width: 100%;
+  justify-content: space-between;
+
+  * {
+    margin: 0;
+  }
+
+  .des,
+  .name {
+    margin-left: 130px;
+  }
+
+  .des {
+    margin-top: 9px;
+    @include font_style(16px, 600);
+    line-height: 20px;
+  }
+
+  .name {
+    margin-top: 16px;
+    @include font_title_style(24px);
+    line-height: 26px;
+    letter-spacing: 0.08em;
+  }
+
+  .rights,
+  .year {
+    @include font_style(14px);
+    line-height: 18px;
+    text-align: center;
+  }
+
+  .rights {
+    margin-top: 16px;
+  }
+
+  .year {
+    margin-top: 12px;
+    color: $primary-color;
+  }
+
+  .containerSocial {
+    display: flex;
+    padding-right: 131px;
+
+    .socials {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .containerBtn {
+        display: flex;
+        align-items: center;
+
+      .btnToTop {
+        margin-left: 94px;
+        height: 46px;
+        width: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $primary-color;
+        border: none;
+      }
+    }
+  }
+}

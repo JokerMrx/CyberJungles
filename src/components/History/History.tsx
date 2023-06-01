@@ -14,6 +14,7 @@ const History: FC<IHistory> = ({ img, history, bg }) => {
         className={styles.bg}
         style={{
           background: `url(${bg})`,
+          backgroundSize: "cover"
         }}
       >
         <div className={styles.opacity}>
